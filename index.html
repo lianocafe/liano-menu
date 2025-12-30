@@ -5,7 +5,6 @@
   <title>منوی دیجیتال کافه Liano</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- فونت -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Vazirmatn:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -50,4 +49,99 @@
     .card h2 {
       font-family:'Playfair Display', serif;
       margin:0 0 12px;
-      font-size:18px
+      font-size:18px;
+      border-bottom:1px solid rgba(0,0,0,0.35);
+      padding-bottom:6px;
+      letter-spacing:1px;
+    }
+
+    .item {
+      display:flex;
+      align-items:center;
+      gap:8px;
+      margin:8px 0;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .line {
+      flex:1;
+      height:1px;
+      background:rgba(0,0,0,0.35);
+    }
+
+    .price {
+      font-weight:700;
+    }
+
+    .full {
+      grid-column:1 / -1;
+      border:2px solid rgba(212,175,55,0.95);
+      background:linear-gradient(135deg, rgba(212,175,55,0.3), rgba(255,255,255,0.18));
+    }
+
+    .note {
+      margin-top:24px;
+      text-align:center;
+      font-size:13px;
+      font-weight:600;
+      opacity:0.95;
+    }
+
+    @media (max-width: 768px) {
+      body { padding:10px; }
+      .board { padding:16px 12px; border-width:4px; }
+      h1 { font-size:24px; letter-spacing:1.5px; }
+      .grid { grid-template-columns:1fr; }
+      .item { font-size:13px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="board">
+
+    <h1>LIANO CAFE</h1>
+
+    <div class="grid">
+
+      <div class="card">
+        <h2>Espresso Bar</h2>
+        <div class="item"><span>عربیکا</span><span class="line"></span><span class="price">80</span></div>
+        <div class="item"><span>روبوستا</span><span class="line"></span><span class="price">50</span></div>
+        <div class="item"><span>60/40</span><span class="line"></span><span class="price">60</span></div>
+        <div class="item"><span>لته</span><span class="line"></span><span class="price">120</span></div>
+        <div class="item"><span>کاپوچینو</span><span class="line"></span><span class="price">120</span></div>
+        <div class="item"><span>امریکانو</span><span class="line"></span><span class="price">85</span></div>
+        <div class="item"><span>افوگاتو</span><span class="line"></span><span class="price">110</span></div>
+        <div class="item"><span>موکا</span><span class="line"></span><span class="price">130</span></div>
+        <div class="item"><span>کارامل ماکیاتو</span><span class="line"></span><span class="price">130</span></div>
+        <div class="item"><span>V60</span><span class="line"></span><span class="price">120</span></div>
+      </div>
+
+      <div class="card">
+        <h2>Hot Drinks</h2>
+        <div class="item"><span>کاپوچینو</span><span class="line"></span><span class="price">90</span></div>
+        <div class="item"><span>هات چاکلت</span><span class="line"></span><span class="price">90</span></div>
+        <div class="item"><span>ماسالا</span><span class="line"></span><span class="price">90</span></div>
+        <div class="item"><span>کرک</span><span class="line"></span><span class="price">90</span></div>
+        <div class="item"><span>شیر پسته زعفرانی</span><span class="line"></span><span class="price">90</span></div>
+        <div class="item"><span>کافی میکس</span><span class="line"></span><span class="price">90</span></div>
+        <div class="item"><span>چای</span><span class="line"></span><span class="price">50</span></div>
+        <div class="item"><span>دمنوش</span><span class="line"></span><span class="price">50</span></div>
+      </div>
+
+      <div class="card full">
+        <h2>Liano Signature Selection</h2>
+        <div class="item"><span>ال لیانو</span><span class="line"></span><span class="price">420</span></div>
+        <div class="item"><span>رافائل آیا</span><span class="line"></span><span class="price">320</span></div>
+      </div>
+
+    </div>
+
+    <div class="note">تمام آیتم‌ها با آیس و سیروپ نیز سرو می‌شوند</div>
+
+  </div>
+
+</body>
+</html>
