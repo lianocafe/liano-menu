@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>منوی دیجیتال کافه Liano</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- فونت لاکچری -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Vazirmatn:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family:'Vazirmatn', sans-serif;
+      background:linear-gradient(135deg,#6b6b6b,#4f4f4f);
+      margin:0;
+      padding:32px;
+      color:#1e1e1e;
+    }
+
+    .board {
+      max-width:860px;
+      margin:auto;
+      background:#7d7d7d;
+      border:8px solid #5e5e5e;
+      padding:32px 28px 28px;
+      box-shadow:0 30px 60px rgba(0,0,0,.45);
+    }
+
+    .logo {
+      display:flex;
+      justify-content:center;
+      margin-bottom:14px;
+    }
+
+    .logo img {
+      width:140px;
+      height:auto;
+    }
+
+    .logo-note {
+      text-align:center;
+      font-size:11px;
+      opacity:0.8;
+      margin-bottom:18px;
+    }
+
+    h1 {
+      font-family:'Playfair Display', serif;
+      text-align:center;
+      margin:0 0 34px;
+      letter-spacing:3px;
+      font-size:34px;
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+    }
+
+    .card {
+      border:1.5px solid rgba(255,255,255,0.6);
+      padding:18px 20px;
+      background:rgba(255,255,255,0.22);
+      backdrop-filter: blur(2px);
+    }
+
+    .card h2 {
+      font-family:'Playfair Display', serif;
+      margin:0 0 14px;
+      font-size:20px;
+      border-bottom:1px solid rgba(0,0,0,0.35);
+      padding-bottom:8px;
+      letter-spacing:1px;
+    }
+
+    .item {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin:9px 0;
+      font-size:15px;
+      font-weight:600;
+    }
+
+    .item .line {
+      flex:1;
+      height:1px;
+      background:rgba(0,0,0,0.35);
+    }
+
+    .price {
+      font-weight:700;
+      letter-spacing:0.5px;
+    }
+
+    .full {
+      grid-column:1 / -1;
+      border:2px solid rgba(212,175,55,0.95);
+      background:linear-gradient(135deg, rgba(212,175,55,0.3), rgba(255,255,255,0.18));
+      box-shadow:0 18px 40px rgba(0,0,0,0.5);
+    }
+
+    .note {
+      margin-top:30px;
+      text-align:center;
+      font-size:14px;
+      letter-spacing:0.6px;
+      opacity:0.95;
+      font-weight:600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="board">
+
+    <!-- لوگو -->
+    <div class="logo">
+      <!-- PDF داخل HTML روی موبایل نمایش داده نمی‌شود؛ باید PNG/SVG جایگزین شود -->
+      <img src="logo.png" alt="Liano Cafe Logo">
+    </div>
+    <div class="logo-note">(لوگو به صورت PNG باید جایگزین شود)</div>
+
+    <h1>LIANO CAFE</h1>
+
+    <div class="grid">
+
+      <div class="card">
+        <h2>Espresso Bar</h2>
+        <div class="item"><span>عربیکا</span><span class="line"></span><span class="price">80</span></div>
+        <div class="item"><span>روبوستا</span><span class="line"></span><span class="price">50</span></div>
+        <div class="item"><span>60/40</span><span class="line"></span><span class="price">60</span></div>
+        <div class="item"><span>لته</span><span class="line"></span><span class="price">120</span></div>
+        <div class="item"><span>کاپوچینو</span><span class="line"></span><span class="price">120</span></div>
+        <div class="item"><span>امریکانو</span><span class="line"></span><span class="price">85</span></div>
+        <div class="item"><span>افوگاتو</span><span class="line"></span><span class="price">110</span></div>
+        <div class="item"><span>موکا</span><span class="line"></span><span class="price">130</span></div>
+        <div class="item"><span>کارامل ماکیاتو</span><span class="line"></span><span class="price">130</span></div>
+        <div class="item"><span>V60</span><span class="line"></span><span class="price">120</span></div>
+      </div>
+
+      <div class="card">
+        <h2>Hot Drinks</h2>
+        <div class="item"><span>کاپوچینو</span><span class="line"></span><span class="price">90</span></div>
+        <div class="item"><span>هات چاکلت</span><span class="line"></span><span class="price">90</span></div>
+        <div class="item"><span>ماسالا</span><span class="line"></span><span class="price">90</span></div>
+        <div class="item"><span>کرک</span><span class="line"></span><span class="price">90</span></div>
+        <div class="item"><span>شیر پسته زعفرانی</span><span class="line"></span><span class="price">90</span></div>
+        <div class="item"><span>کافی میکس</span><span class="line"></span><span class="price">90</span></div>
+        <div class="item"><span>چای</span><span class="line"></span><span class="price">50</span></div>
+        <div class="item"><span>دمنوش</span><span class="line"></span><span class="price">50</span></div>
+      </div>
+
+      <div class="card full">
+        <h2>Liano Signature Selection</h2>
+        <div class="item"><span>ال لیانو</span><span class="line"></span><span class="price">420</span></div>
+        <div class="item"><span>رافائل آیا</span><span class="line"></span><span class="price">320</span></div>
+      </div>
+
+    </div>
+
+    <div class="note">تمام آیتم‌ها با آیس و سیروپ نیز سرو می‌شوند</div>
+
+  </div>
+
+</body>
+</html>
