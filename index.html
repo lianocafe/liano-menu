@@ -5,94 +5,114 @@
   <title>منوی دیجیتال کافه Liano</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Vazirmatn:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Vazirmatn:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       font-family:'Vazirmatn', sans-serif;
-      background:linear-gradient(135deg,#6b6b6b,#4f4f4f);
+      background:linear-gradient(160deg,#2f2f2f,#4b4b4b);
       margin:0;
-      padding:16px;
-      color:#1e1e1e;
+      padding:14px;
+      color:#f2f2f2;
     }
 
     .board {
-      max-width:920px;
+      max-width:900px;
       margin:auto;
-      background:#7d7d7d;
-      border:6px solid #5e5e5e;
-      padding:22px 18px;
-      box-shadow:0 20px 45px rgba(0,0,0,.45);
+      background:linear-gradient(180deg,#3b3b3b,#2a2a2a);
+      border-radius:22px;
+      padding:26px 20px 30px;
+      box-shadow:0 25px 70px rgba(0,0,0,.6);
     }
 
     h1 {
       font-family:'Playfair Display', serif;
       text-align:center;
-      margin:10px 0 26px;
+      margin:6px 0 30px;
+      font-size:32px;
+      letter-spacing:3px;
+      color:#e6e6e6;
+    }
+
+    .subtitle {
+      text-align:center;
+      font-size:12px;
       letter-spacing:2px;
-      font-size:30px;
+      margin-bottom:30px;
+      opacity:0.8;
     }
 
     .grid {
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:22px;
+      gap:24px;
     }
 
     .card {
-      border:1.5px solid rgba(255,255,255,0.6);
-      padding:16px;
-      background:rgba(255,255,255,0.22);
-      backdrop-filter: blur(2px);
+      background:rgba(255,255,255,0.06);
+      border-radius:18px;
+      padding:20px 18px;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
     }
 
     .card h2 {
       font-family:'Playfair Display', serif;
-      margin:0 0 12px;
-      font-size:18px;
-      border-bottom:1px solid rgba(0,0,0,0.35);
-      padding-bottom:6px;
-      letter-spacing:1px;
+      font-size:19px;
+      margin:0 0 18px;
+      text-align:center;
+      letter-spacing:1.5px;
+      color:#d4af37;
     }
 
     .item {
       display:flex;
       align-items:center;
-      gap:8px;
-      margin:8px 0;
+      margin:12px 0;
       font-size:14px;
-      font-weight:600;
+      font-weight:500;
     }
 
-    .line {
+    .item span:first-child {
+      white-space:nowrap;
+    }
+
+    /* ✨ خط گرادیانی لاکچری */
+    .dots {
       flex:1;
       height:1px;
-      background:rgba(0,0,0,0.35);
+      margin:0 10px;
+      background:linear-gradient(
+        to left,
+        rgba(212,175,55,0.05),
+        rgba(212,175,55,0.45),
+        rgba(212,175,55,0.05)
+      );
     }
 
     .price {
-      font-weight:700;
+      font-weight:600;
+      color:#ffffff;
     }
 
     .full {
       grid-column:1 / -1;
-      border:2px solid rgba(212,175,55,0.95);
-      background:linear-gradient(135deg, rgba(212,175,55,0.3), rgba(255,255,255,0.18));
+      background:linear-gradient(135deg,rgba(212,175,55,0.25),rgba(255,255,255,0.04));
+      border-radius:20px;
+      box-shadow:0 20px 50px rgba(0,0,0,0.6);
     }
 
     .note {
-      margin-top:24px;
+      margin-top:26px;
       text-align:center;
       font-size:13px;
-      font-weight:600;
-      opacity:0.95;
+      letter-spacing:0.8px;
+      opacity:0.9;
     }
 
-    @media (max-width: 768px) {
-      body { padding:10px; }
-      .board { padding:16px 12px; border-width:4px; }
-      h1 { font-size:24px; letter-spacing:1.5px; }
+    @media (max-width:768px) {
+      h1 { font-size:26px; }
       .grid { grid-template-columns:1fr; }
+      .card { padding:18px 16px; }
       .item { font-size:13px; }
     }
   </style>
@@ -102,39 +122,40 @@
   <div class="board">
 
     <h1>LIANO CAFE</h1>
+    <div class="subtitle">SPECIALTY COFFEE MENU</div>
 
     <div class="grid">
 
       <div class="card">
         <h2>Espresso Bar</h2>
-        <div class="item"><span>عربیکا</span><span class="line"></span><span class="price">80</span></div>
-        <div class="item"><span>روبوستا</span><span class="line"></span><span class="price">50</span></div>
-        <div class="item"><span>60/40</span><span class="line"></span><span class="price">60</span></div>
-        <div class="item"><span>لته</span><span class="line"></span><span class="price">120</span></div>
-        <div class="item"><span>کاپوچینو</span><span class="line"></span><span class="price">120</span></div>
-        <div class="item"><span>امریکانو</span><span class="line"></span><span class="price">85</span></div>
-        <div class="item"><span>افوگاتو</span><span class="line"></span><span class="price">110</span></div>
-        <div class="item"><span>موکا</span><span class="line"></span><span class="price">130</span></div>
-        <div class="item"><span>کارامل ماکیاتو</span><span class="line"></span><span class="price">130</span></div>
-        <div class="item"><span>V60</span><span class="line"></span><span class="price">120</span></div>
+        <div class="item"><span>عربیکا</span><span class="dots"></span><span class="price">80</span></div>
+        <div class="item"><span>روبوستا</span><span class="dots"></span><span class="price">50</span></div>
+        <div class="item"><span>60/40</span><span class="dots"></span><span class="price">60</span></div>
+        <div class="item"><span>لته</span><span class="dots"></span><span class="price">120</span></div>
+        <div class="item"><span>کاپوچینو</span><span class="dots"></span><span class="price">120</span></div>
+        <div class="item"><span>امریکانو</span><span class="dots"></span><span class="price">85</span></div>
+        <div class="item"><span>افوگاتو</span><span class="dots"></span><span class="price">110</span></div>
+        <div class="item"><span>موکا</span><span class="dots"></span><span class="price">130</span></div>
+        <div class="item"><span>کارامل ماکیاتو</span><span class="dots"></span><span class="price">130</span></div>
+        <div class="item"><span>V60</span><span class="dots"></span><span class="price">120</span></div>
       </div>
 
       <div class="card">
         <h2>Hot Drinks</h2>
-        <div class="item"><span>کاپوچینو</span><span class="line"></span><span class="price">90</span></div>
-        <div class="item"><span>هات چاکلت</span><span class="line"></span><span class="price">90</span></div>
-        <div class="item"><span>ماسالا</span><span class="line"></span><span class="price">90</span></div>
-        <div class="item"><span>کرک</span><span class="line"></span><span class="price">90</span></div>
-        <div class="item"><span>شیر پسته زعفرانی</span><span class="line"></span><span class="price">90</span></div>
-        <div class="item"><span>کافی میکس</span><span class="line"></span><span class="price">90</span></div>
-        <div class="item"><span>چای</span><span class="line"></span><span class="price">50</span></div>
-        <div class="item"><span>دمنوش</span><span class="line"></span><span class="price">50</span></div>
+        <div class="item"><span>کاپوچینو</span><span class="dots"></span><span class="price">90</span></div>
+        <div class="item"><span>هات چاکلت</span><span class="dots"></span><span class="price">90</span></div>
+        <div class="item"><span>ماسالا</span><span class="dots"></span><span class="price">90</span></div>
+        <div class="item"><span>کرک</span><span class="dots"></span><span class="price">90</span></div>
+        <div class="item"><span>شیر پسته زعفرانی</span><span class="dots"></span><span class="price">90</span></div>
+        <div class="item"><span>کافی میکس</span><span class="dots"></span><span class="price">90</span></div>
+        <div class="item"><span>چای</span><span class="dots"></span><span class="price">50</span></div>
+        <div class="item"><span>دمنوش</span><span class="dots"></span><span class="price">50</span></div>
       </div>
 
       <div class="card full">
-        <h2>Liano Signature Selection</h2>
-        <div class="item"><span>ال لیانو</span><span class="line"></span><span class="price">420</span></div>
-        <div class="item"><span>رافائل آیا</span><span class="line"></span><span class="price">320</span></div>
+        <h2>Liano Signature</h2>
+        <div class="item"><span>ال لیانو</span><span class="dots"></span><span class="price">420</span></div>
+        <div class="item"><span>رافائل آیا</span><span class="dots"></span><span class="price">320</span></div>
       </div>
 
     </div>
